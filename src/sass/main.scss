@@ -32,7 +32,7 @@ body {
     position: relative;
     padding: 5em;
     transition: transform 3s;
-    transform-style: preserve-3d;
+    
     font-family: 'Agbalumo';
     height: 300px;
 }
@@ -55,6 +55,7 @@ body {
     padding: 2em;
     backface-visibility: hidden;
     border-radius: 25px;
+    transform-style: preserve-3d;
 }
 
 .card__front {
