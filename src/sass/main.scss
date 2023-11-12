@@ -8,6 +8,13 @@
     src: url('../assets/fonts/Agbalumo-Regular.ttf') format(ttf);
 }
 
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: hsl(50, 70%, 80%);
+}
+
 .headerTitle, .ROFL {
     font-size: 300%;
     font-family: 'Agbalumo';
@@ -17,27 +24,21 @@
     animation: roll 2s linear;
 }
 
-body {
-    height: 100vh;
-    display: grid;
-    place-items: center;
-}
-
-.card {
+.panel {
     width: 400px;
 }
 
-.card__content {
+.panel__content {
     text-align: center;
     position: relative;
     padding: 5em;
     transition: transform 3s;
-    
+    transform-style: preserve-3d;
     font-family: 'Agbalumo';
     height: 300px;
 }
 
-.card:hover .card__content {
+.panel:hover .panel__content {
     transform: rotateY(.5turn);
 }
 
@@ -45,8 +46,8 @@ body {
     font-size: 200%;
 }
 
-.card__front, 
-.card__back {
+.panel__front, 
+.panel__back {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -58,20 +59,20 @@ body {
     transform-style: preserve-3d;
 }
 
-.card__front {
-    background: lightgreen;
+.panel__front {
+    background: hsl(100, 80%, 75%);
 }
 
-.card__title {
-    transform: translateZ(200px);
+.panel__title {
+    transform: translateZ(100px);
 }
 
-.card__back {
+.panel__back {
     transform: rotateY(.5turn);
-    background: lightblue;
+    background: hsl(190, 80%, 80%);
 }
 
-.card__body {
+.panel__body {
     color: brown;
 }
 
